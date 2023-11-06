@@ -17,10 +17,12 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      padding-bottom: 15px;
     }
 
     .attribution a {
       color: hsl(228, 45%, 44%);
+      font-weight: bold;
     }
   </style>
 </head>
@@ -29,69 +31,81 @@
 
   <div class="container">
     <header>
-      <h2>Notifications <span>3</span></h2>
-      <p class="mark">Mark all as read</p>
+      <h2>Notifications <span class="counter">3</span></h2>
+      <span class="mark">Mark all as read</span>
     </header>
-    <section>
-      <div class="noti-box">
-        <img src="assets/images/avatar-mark-webber.webp" alt="">
-        <p><span class="name">Mark webber</span> reacted to your recent post <a href=""> My first tournament today!</a>
-          <span class="bullets"></span>
-          <span class="time">1m ago</span>
-        </p>
+    <div class="noti-box un-read">
+      <img src="./assets/images/avatar-mark-webber.webp" alt="">
+      <div class="info">
+        <div class="message"><span class="name">Mark Webber</span> <span class="action">reacted to your recent
+            post</span> <a href="" class="target">
+            My first tournament!</a></div>
+        <span class="time">1m ago</span>
       </div>
-      <div class="noti-box">
-        <img src="assets/images/avatar-angela-gray.webp" alt="">
-        <p><span class="name">Angela Gray</span> followed you <span class="bullets"></span>
-          <span class="time">5m ago</span>
-        </p>
+    </div>
+    <div class="noti-box un-read">
+      <img src="./assets/images/avatar-angela-gray.webp" alt="">
+      <div class="info">
+        <div class="message"><span class="name">Angela Gray</span> <span class="action"> followed you</span> <span
+            class="watched"></span></div>
+        <span class="time">5m ago</span>
       </div>
-      <div class="noti-box">
-        <img src="assets/images/avatar-jacob-thompson.webp" alt="">
-        <p><span class="name">Jacob Thompson</span> has joined your group <a href="" class="blue-link"> Chess Club</a>
-          <span class="bullets"></span>
-          <span class="time">1 day ago</span>
-        </p>
-      </div>
-      <div class="noti-box bg-white message-box">
-        <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="">
-        <p><span class="name">Rizky Hasanuddin</span> sent you a private message
-
-          <span class="time">5 day ago</span>
-          <span class="message">
-            Hello,thanks for setting up the Chess Club. i've been a member for a few weeks now and i'm already having
-            lots of fun and improving my game.
-          </span>
-        </p>
-      </div>
-      <div class="noti-box bg-white">
-        <div><img src="assets/images/avatar-kimberly-smith.webp" alt=""></div>
-        <p>
-        <div><span class="name">Kimberly Smith</span> commented on your picture
-          <span class="time">1 day ago</span>
+    </div>
+    <div class="noti-box un-read">
+      <img src="./assets/images/avatar-jacob-thompson.webp" alt="">
+      <div class="info">
+        <div class="message"><span class="name">Jacob Thompson</span> <span class="action"> has joined your group</span>
+          <a href="" class="target blue"> Chess Club</a>
         </div>
-        <img src="assets/images/image-chess.webp" alt="" class="comment">
-        </p>
+        <span class="time">1 day ago</span>
       </div>
-      <div class="noti-box bg-white">
-        <img src="assets/images/avatar-nathan-peterson.webp" alt="">
-        <p><span class="name">Nathan Peterson </span> reacted to your recent post <a href="" class="">5 end-game
-            strategies to increase your win rate</a>
-          <span class="time">2 weeks ago</span>
-        </p>
+    </div>
+    <div class="noti-box with-message">
+      <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="">
+      <div class="info">
+        <div class="message"><span class="name">Rizky Hasanuddin</span> <span class="action"> sent you a private
+            message</span>
+        </div>
+        <span class="time">5 days ago</span>
+        <p class="show-message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+          i'm already having
+          lots of fun and improving my game. </p>
       </div>
-      <div class="noti-box bg-white">
-        <img src="assets/images/avatar-anna-kim.webp" alt="">
-        <p><span class="name">Anna Kim</span> left the group <a href="" class="blue-link"> Chess Club</a>
-          <span class="time">2 weeks ago</span>
-        </p>
+    </div>
+    <div class="noti-box with-image">
+      <img src="./assets/images/avatar-kimberly-smith.webp" alt="">
+      <div class="info">
+        <div class="message"><span class="name">Kimberly Smith</span> <span class="action"> commented on your
+            picture</span>
+
+        </div>
+        <span class="time">1 day ago</span>
       </div>
-    </section>
+      <img src="./assets/images/image-chess.webp" alt="" class="image">
+    </div>
+    <div class="noti-box">
+      <img src="./assets/images/avatar-nathan-peterson.webp" alt="">
+      <div class="info">
+        <div class="message"><span class="name">Nathan Peterson</span> <span class="action">reacted to your recent post
+          </span> <a href="" class="target">5 end-game strategies to increase your win rate</a> </div>
+        <span class="time">2 weeks ago</span>
+      </div>
+    </div>
+    <div class="noti-box">
+      <img src="./assets/images/avatar-anna-kim.webp" alt="">
+      <div class="info">
+        <div class="message"><span class="name">Anna Kim</span> <span class="action">left the group </span> <a href=""
+            class="target">Chess Club</a> </div>
+        <span class="time">2 weeks ago</span>
+      </div>
+    </div>
   </div>
+  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">huzaifa salah</a>.
   </div>
+  <script src="main.js"></script>
 </body>
 
 </html>

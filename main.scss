@@ -1,0 +1,171 @@
+:root {
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+$blueColor: hsl(219, 85%, 26%);
+$redColor: hsl(1, 90%, 64%);
+$veryLightBlue: hsl(210, 60%, 98%);
+$lightBlue1: hsl(211, 68%, 94%);
+$lightBlue2: hsl(205, 33%, 90%);
+$gryisBlue: hsl(219, 14%, 63%);
+$dargrayisBlue: hsl(219, 12%, 42%);
+$darkBlue: hsl(224, 21%, 14%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--Light-grayish-blue-1);
+  @media (min-width: 678px) {
+    background-color: $lightBlue1;
+  }
+}
+
+.container {
+  background-color: white;
+  padding: 15px 10px;
+  max-width: 645px;
+  margin: 100px auto 20px;
+  @media (min-width: 678px) {
+    border-radius: 15px;
+    padding: 30px 20px 10px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @media (max-width: 676px) {
+      font-size: 13px;
+      .counter {
+        font-size: 11px !important;
+      }
+    }
+    h2 {
+      position: relative;
+      .counter {
+        font-size: 15px;
+        margin-left: 5px;
+        padding: 3px 9px;
+        background-color: hsl(219, 85%, 26%);
+        color: white;
+        border-radius: 5px;
+        position: absolute;
+        top: 1px;
+      }
+    }
+    .mark {
+      cursor: pointer;
+      color: $gryisBlue;
+      &:hover {
+        color: $blueColor;
+      }
+    }
+  }
+  .noti-box {
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    @media (max-width: 676px) {
+      font-size: 15px;
+      line-height: 1.3;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    .info {
+      align-self: center;
+      .message {
+        margin-bottom: 3px;
+        position: relative;
+        width: fit-content;
+        // & .watched {
+        //   width: 10px;
+        //   height: 10px;
+        //   background-color: $redColor;
+        //   border-radius: 50%;
+        //   position: absolute;
+        //   right: -12px;
+        //   top: 6px;
+        //   display: none;
+        // }
+        .name {
+          color: $darkBlue;
+          font-weight: bold;
+          cursor: pointer;
+          margin-right: 4px;
+          &:hover {
+            color: $blueColor;
+          }
+        }
+        .action {
+          color: $gryisBlue;
+          margin-right: 4px;
+        }
+        .target {
+          text-decoration: none;
+          color: $dargrayisBlue;
+          font-weight: bold;
+          &:hover {
+            color: $blueColor;
+          }
+        }
+      }
+      .time {
+        font-size: 14px;
+        color: $gryisBlue;
+      }
+    }
+  }
+}
+.un-read {
+  background-color: $veryLightBlue;
+  .info {
+    .message {
+      :last-child {
+        position: relative;
+        &::before {
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          right: -12px;
+          bottom: 2px;
+          position: absolute;
+          z-index: 19;
+          background-color: $redColor;
+        }
+      }
+    }
+  }
+}
+
+.blue {
+  color: $blueColor !important;
+}
+
+.with-message {
+  .show-message {
+    padding: 15px;
+    border: 1px solid $lightBlue2;
+    margin-top: 15px;
+    border-radius: 8px;
+    line-height: 1.4;
+    color: $dargrayisBlue;
+    &:hover {
+      background-color: $lightBlue1;
+    }
+  }
+}
+.with-image {
+  .image {
+    margin-left: auto;
+  }
+}
